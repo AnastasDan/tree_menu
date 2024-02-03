@@ -1,0 +1,2 @@
+Django==3.2.3
+django-bootstrap5==22.2
