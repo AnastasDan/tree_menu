@@ -1,0 +1,12 @@
+<ul class="list-unstyled">
+  {% for item in items %}
+    <li class="mb-1 ms-3">
+      <a class="nav-link" href="?{{ menu_name }}={{ item.slug }}">{{ item.name }}</a>
+      {% if item.child_items %}
+        <ul class="list-unstyled ms-4">
+          {% include 'app_menu/menu.html' with items=item.child_items %}
+        </ul>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
